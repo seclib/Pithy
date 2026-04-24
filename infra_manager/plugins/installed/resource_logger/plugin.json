@@ -1,0 +1,7 @@
+{
+  "name": "resource_logger",
+  "version": "1.0.0",
+  "type": "infra",
+  "description": "Log les transitions d'état et événements de scaling",
+  "enabled": true
+}

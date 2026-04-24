@@ -1,0 +1,1 @@
+"""PIThy - Plugins module"""

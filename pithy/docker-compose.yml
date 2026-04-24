@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+
+  pithy:
+    build: .
+    container_name: pithy_core
+    restart: "no"
+    volumes:
+      - .:/app
+      - ./data:/app/data
+    working_dir: /app
+
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: pithy_chroma
+    restart: "no"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/db:/chroma/chroma

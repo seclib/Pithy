@@ -1,0 +1,1 @@
+"""PIThy - Infra Manager module"""

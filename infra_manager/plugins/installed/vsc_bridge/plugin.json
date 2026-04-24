@@ -1,0 +1,7 @@
+{
+  "name": "vsc_bridge",
+  "version": "1.0.0",
+  "type": "integration",
+  "description": "Simule un bridge VSCode pour notifications système",
+  "enabled": true
+}

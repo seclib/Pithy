@@ -1,0 +1,7 @@
+{
+  "name": "git_assistant",
+  "version": "1.0.0",
+  "type": "integration",
+  "description": "Assistant Git — status, log, diff, branch",
+  "enabled": true
+}

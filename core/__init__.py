@@ -1,0 +1,1 @@
+"""PIThy - Core module"""

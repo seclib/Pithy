@@ -1,0 +1,46 @@
+{
+  "modes": {
+    "active": {
+      "description": "Utilisateur interagit activement",
+      "services_required": ["chroma", "pithy"],
+      "transition_to_low": {
+        "idle_seconds": 300,
+        "cpu_below": 20
+      }
+    },
+    "low_usage": {
+      "description": "Activité sporadique",
+      "services_required": ["chroma"],
+      "transition_to_idle": {
+        "idle_seconds": 600,
+        "cpu_below": 10
+      },
+      "transition_to_active": {
+        "activity_detected": true
+      }
+    },
+    "idle": {
+      "description": "Aucune activité détectée",
+      "services_required": [],
+      "transition_to_sleep": {
+        "idle_seconds": 1800,
+        "cpu_below": 5
+      },
+      "transition_to_active": {
+        "activity_detected": true
+      }
+    },
+    "sleep": {
+      "description": "Infrastructure minimale",
+      "services_required": [],
+      "transition_to_active": {
+        "activity_detected": true
+      }
+    }
+  },
+  "protection": {
+    "min_action_interval_seconds": 30,
+    "max_restarts_per_hour": 10,
+    "cooldown_after_error_seconds": 60
+  }
+}
